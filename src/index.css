@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#quote-box {
+  height: 20rem;
+  width: 40rem;
+  background-color: aqua;
+  margin: auto;
+  padding: 3rem;
+}
