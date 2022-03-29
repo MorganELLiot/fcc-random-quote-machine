@@ -19,7 +19,7 @@ export default function Quote() {
 
         React.useEffect(() => { 
             getQuotesData()
-        },[])
+        }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     function handleClick() {
         const randomNumber = Math.floor(Math.random() * allQuotes.length)
@@ -42,7 +42,7 @@ export default function Quote() {
             </div>
             <div id="social-links">
                 <SocialIcon url="https://twitter.com/intent/tweet" bgColor="#777">
-                    <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="blank"></a>
+                    <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="blank">Tweet Quote</a>
                 </SocialIcon>
             </div>
         </div>

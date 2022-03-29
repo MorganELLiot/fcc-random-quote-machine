@@ -48,3 +48,7 @@ code {
   bottom: 3rem;
   left: 3rem;
 }
+
+#tweet-quote {
+  font-size: 0;
+}
