@@ -1,4 +1,5 @@
 import React from "react"
+import {SocialIcon} from "react-social-icons";
 
 export default function Quote() {
 
@@ -17,7 +18,6 @@ export default function Quote() {
     }
 
         React.useEffect(() => { 
-            console.log("effect ran")
             getQuotesData()
         },[])
 
@@ -25,19 +25,26 @@ export default function Quote() {
         const randomNumber = Math.floor(Math.random() * allQuotes.length)
         const newQuoteText = allQuotes[randomNumber].quote
         const newQuoteAuthor = allQuotes[randomNumber].author  
-        setQuote(prevQuote => ({
+        setQuote({
           text: newQuoteText,
           author: newQuoteAuthor
-        }))
+        })
     }
 
     return (
         <div id="quote-box">
-            <h1 id="text">{quote.text}</h1>
-            <h1 id="author">{quote.author}</h1>
-            <button id="new-quote" onClick={handleClick}>
-                New Quote
-            </button>
+            <div id="quote">
+                <h1 id="text">{quote.text}</h1>
+                <h1 id="author">{quote.author}</h1>
+                <button id="new-quote" onClick={handleClick}>
+                    New Quote
+                </button>
+            </div>
+            <div id="social-links">
+                <SocialIcon url="https://twitter.com/intent/tweet" bgColor="#777">
+                    <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="blank"></a>
+                </SocialIcon>
+            </div>
         </div>
     )
 }
